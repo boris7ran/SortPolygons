@@ -3,23 +3,25 @@
 namespace Tests\Services;
 
 use PHPUnit\Framework\TestCase;
-use App\Services\ReadFileService;
+use App\Services\JsonFileService;
+use App\Services\JsonConverterService;
 use App\Exceptions\PolygonException;
 
 class ReadFileTest extends TestCase
 {
     /**
      * @dataProvider filesProvider
+     * @param $inputFile
      */
-    public function testReadFileWithNoFile($input_file)
+    public function testReadFileWithNoFile($inputFile)
     {
-        $rfs = new ReadFileService();
+        $jfs = new JsonFileService(new JsonConverterService());
 
         try {
-            $polys = $rfs->readFile($input_file);
+            $polys = $jfs->loadRepo($inputFile);
             $this->assertNotNull($polys);
         } catch (PolygonException $e) {
-            $this->assertEquals("The file $input_file does not exist", $e->getMessage());
+            $this->assertEquals("The file $inputFile does not exist", $e->getMessage());
         }
     }
 

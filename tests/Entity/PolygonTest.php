@@ -11,6 +11,8 @@ class PolygonTest extends TestCase
 {
     /**
      * @dataProvider polygonProvider
+     * @param [] $vertices
+     * @param bool $case
      */
 
     public function testPolygonConstructionWithCatchTest($vertices, $case)
@@ -63,6 +65,10 @@ class PolygonTest extends TestCase
         }
     }
 
+    /**
+     * @return array
+     * @throws PolygonException
+     */
     public function polygonProvider()
     {
         $arr = [
@@ -75,6 +81,10 @@ class PolygonTest extends TestCase
         return $arr;
     }
 
+    /**
+     * @return array
+     * @throws PolygonException
+     */
     public function polygonWithSamePoints()
     {
         $arr = [
