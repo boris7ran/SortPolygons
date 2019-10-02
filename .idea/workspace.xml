@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07100c2d-2b05-4c92-9e85-dcbaca0ad082" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsonSchemas.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/ConverterInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/RepoInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/JsonConverterService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Services/JsonFileService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sortpoly.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Command/SortPolygonCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/SortPolygonCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Point.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Point.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Polygon.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Polygon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exceptions/MyException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceptions/PolygonException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/ReadFileService.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/SortPolygonsService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/PolygonsService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Entity/PointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/PointTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Entity/PolygonTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/PolygonTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Services/ReadFileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Services/ReadFileTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Services/SortPolygonsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Services/SortPolygonsTest.php" afterDir="false" />
-    </list>
+    <list default="true" id="07100c2d-2b05-4c92-9e85-dcbaca0ad082" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569919439036</updated>
       <workItem from="1569919440192" duration="20316000" />
-      <workItem from="1570000395228" duration="21662000" />
+      <workItem from="1570000395228" duration="21998000" />
     </task>
     <servers />
   </component>

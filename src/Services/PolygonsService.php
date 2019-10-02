@@ -19,9 +19,9 @@ class PolygonsService
             for ($i = 0; $i < count($polygons) - 1; $i++) {
                 for ($j = $i + 1; $j < count($polygons); $j++) {
                     if ($polygons[$i]->getWidth() < $polygons[$j]->getWidth()) {
-                        $temp_poly = $polygons[$i];
+                        $tempPoly = $polygons[$i];
                         $polygons[$i] = $polygons[$j];
-                        $polygons[$j] = $temp_poly;
+                        $polygons[$j] = $tempPoly;
                     }
                 }
             }
