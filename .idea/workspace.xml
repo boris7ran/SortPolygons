@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="07100c2d-2b05-4c92-9e85-dcbaca0ad082" name="Default Changelist" comment="" />
+    <list default="true" id="07100c2d-2b05-4c92-9e85-dcbaca0ad082" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Point.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Point.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Polygon.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Polygon.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/ReadFileService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/ReadFileService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Entity/PointTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/PointTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Entity/PolygonTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Entity/PolygonTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Services/ReadFileTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Services/ReadFileTest.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +22,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -54,7 +66,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1RayKjpWs1ngE8XWbBBajgBOXYz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -92,11 +106,22 @@
       <option name="presentableId" value="Default" />
       <updated>1569919439036</updated>
       <workItem from="1569919440192" duration="20316000" />
-      <workItem from="1570000395228" duration="11464000" />
+      <workItem from="1570000395228" duration="14277000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

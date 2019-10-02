@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use App\Entity\Point;
 use JsonSerializable;
-use \Exception;
+use App\Exceptions\MyException;
 
 class Polygon implements JsonSerializable
 {
@@ -19,7 +19,7 @@ class Polygon implements JsonSerializable
     {
         if (count($vertices) < 3) {
 
-            throw new Exception("Polygon cant be defined with less than 3 vertices");
+            throw new MyException("Polygon cant be defined with less than 3 vertices");
         }
 
         if ($this->checkForDuplicatePoints($vertices)) {
@@ -27,7 +27,7 @@ class Polygon implements JsonSerializable
             $this->calculateWidth();
         } else {
 
-            throw new Exception("Polygon cant have multiple same points");
+            throw new MyException("Polygon cant have multiple same points");
         }
     }
 

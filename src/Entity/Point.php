@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use JsonSerializable;
-use \Exception;
+use App\Exceptions\MyException;
 
 class Point implements JsonSerializable
 {
@@ -18,7 +18,7 @@ class Point implements JsonSerializable
      */
     public function __construct($x, $y) {
         if (!is_int($x) || !is_int($y)) {
-            throw new Exception("Values arent integer");
+            throw new MyException("Values are not integer");
         }
 
         $this->x = $x;

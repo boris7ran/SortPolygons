@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Entity\Point;
 use App\Entity\Polygon;
-use \Exception;
+use App\Exceptions\MyException;
 
 class ReadFileService
 {
@@ -16,7 +16,7 @@ class ReadFileService
     {
         if (!file_exists($input_file)) {
 
-            throw new Exception("The file $input_file doesnt exist");
+            throw new MyException("The file $input_file doesnt exist");
         } else {
             $json = file_get_contents($input_file);
             $json_data = json_decode($json, true);

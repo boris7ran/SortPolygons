@@ -4,7 +4,7 @@ namespace Tests\Entity;
 
 use App\Entity\Point;
 use PHPUnit\Framework\TestCase;
-use \Exception;
+use App\Exceptions\MyException;
 
 class PointTest extends TestCase
 {
@@ -16,8 +16,8 @@ class PointTest extends TestCase
         try {
             $point = new Point($x, $y);
             $this->assertNotNull($point);
-        } catch (Exception $e) {
-            $this->assertEquals("Values arent integer", $e->getMessage());
+        } catch (MyException $e) {
+            $this->assertEquals("Values are not integer", $e->getMessage());
         }
     }
 

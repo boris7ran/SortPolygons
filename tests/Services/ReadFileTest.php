@@ -4,7 +4,7 @@ namespace Tests\Services;
 
 use PHPUnit\Framework\TestCase;
 use App\Services\ReadFileService;
-use Exception;
+use App\Exceptions\MyException;
 
 class ReadFileTest extends TestCase
 {
@@ -18,7 +18,7 @@ class ReadFileTest extends TestCase
         try {
             $polys = $rfs->readFile($input_file);
             $this->assertNotNull($polys);
-        } catch (Exception $e) {
+        } catch (MyException $e) {
             $this->assertEquals("The file $input_file doesnt exist", $e->getMessage());
         }
     }
