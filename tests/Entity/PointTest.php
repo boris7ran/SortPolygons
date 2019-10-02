@@ -4,7 +4,7 @@ namespace Tests\Entity;
 
 use App\Entity\Point;
 use PHPUnit\Framework\TestCase;
-use App\Exceptions\MyException;
+use App\Exceptions\PolygonException;
 
 class PointTest extends TestCase
 {
@@ -16,7 +16,7 @@ class PointTest extends TestCase
         try {
             $point = new Point($x, $y);
             $this->assertNotNull($point);
-        } catch (MyException $e) {
+        } catch (PolygonException $e) {
             $this->assertEquals("Values are not integer", $e->getMessage());
         }
     }

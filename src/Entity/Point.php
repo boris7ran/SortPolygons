@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 use JsonSerializable;
-use App\Exceptions\MyException;
+use App\Exceptions\PolygonException;
 
 class Point implements JsonSerializable
 {
@@ -15,10 +15,11 @@ class Point implements JsonSerializable
      * Point constructor.
      * @param integer $x
      * @param integer $y
+     * @throws PolygonException
      */
     public function __construct($x, $y) {
         if (!is_int($x) || !is_int($y)) {
-            throw new MyException("Values are not integer");
+            throw new PolygonException("Values are not integer");
         }
 
         $this->x = $x;

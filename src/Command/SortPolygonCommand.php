@@ -2,9 +2,10 @@
 
 namespace App\Command;
 
-use App\Services\ReadFileService;
-use App\Services\SortPolygons;
-use App\Services\SortPolygonsService;
+use App\Exceptions\PolygonException;
+use App\Services\JsonConverterService;
+use App\Services\JsonFileService;
+use App\Services\PolygonsService;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -16,25 +17,23 @@ class SortPolygonCommand extends Command
 
     protected function configure()
     {
-        $this->addArgument('input-file', InputArgument::REQUIRED, 'Ulazni file');
-        $this->addArgument('output-file', InputArgument::REQUIRED, 'Izlazni file');
+        $this->addArgument('inputFile', InputArgument::REQUIRED, 'Ulazni file');
+        $this->addArgument('outputFile', InputArgument::REQUIRED, 'Izlazni file');
     }
 
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
+     * @throws PolygonException
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $input_file = $input->getArgument('input-file');
+        $jfs = new JsonFileService(new JsonConverterService());
+        $polys = $jfs->loadRepo($input->getArgument('inputFile'));
 
-        $rfs = new ReadFileService();
-        $polys = $rfs->readFile($input_file);
+        $polyService = new PolygonsService();
+        $polysSorted = $polyService->sortPolys($polys);
 
-        $sps = new SortPolygonsService();
-        $polys = $sps->sortPolys($polys);
-
-        $json_data = json_encode($polys);
-        file_put_contents($input->getArgument('output-file'), $json_data);
+        $jfs->saveToRepo($input->getArgument('outputFile'), $polysSorted);
     }
 }

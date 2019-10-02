@@ -4,7 +4,7 @@ namespace Tests\Services;
 
 use PHPUnit\Framework\TestCase;
 use App\Services\ReadFileService;
-use App\Exceptions\MyException;
+use App\Exceptions\PolygonException;
 
 class ReadFileTest extends TestCase
 {
@@ -18,8 +18,8 @@ class ReadFileTest extends TestCase
         try {
             $polys = $rfs->readFile($input_file);
             $this->assertNotNull($polys);
-        } catch (MyException $e) {
-            $this->assertEquals("The file $input_file doesnt exist", $e->getMessage());
+        } catch (PolygonException $e) {
+            $this->assertEquals("The file $input_file does not exist", $e->getMessage());
         }
     }
 

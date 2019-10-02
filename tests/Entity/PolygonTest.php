@@ -5,7 +5,7 @@ namespace Tests\Services;
 use App\Entity\Point;
 use PHPUnit\Framework\TestCase;
 use App\Entity\Polygon;
-use App\Exceptions\MyException;
+use App\Exceptions\PolygonException;
 
 class PolygonTest extends TestCase
 {
@@ -23,13 +23,13 @@ class PolygonTest extends TestCase
             } else {
                 $this->assertNull($poly);
             }
-        } catch (MyException $e) {
-            $this->assertEquals("Polygon cant be defined with less than 3 vertices", $e->getMessage());
+        } catch (PolygonException $e) {
+            $this->assertEquals("Polygon cannot be defined with less than 3 vertices", $e->getMessage());
         }
     }
 
     /**
-     * @expectedException MyException
+     * @expectedException PolygonException
      * @expectedExceptionMessage Polygon cant be defined with less than 3 vertices
      * @dataProvider polygonProvider
      */
@@ -58,8 +58,8 @@ class PolygonTest extends TestCase
                 $this->assertNull($poly);
             }
 
-        } catch (MyException $e) {
-            $this->assertEquals("Polygon cant have multiple same points", $e->getMessage());
+        } catch (PolygonException $e) {
+            $this->assertEquals("Polygon cannot have multiple same points", $e->getMessage());
         }
     }
 

@@ -7,7 +7,7 @@ use App\Entity\Polygon;
 use PHPUnit\Framework\Constraint\IsFalse;
 use PHPUnit\Framework\Constraint\IsTrue;
 use PHPUnit\Framework\TestCase;
-use App\Services\SortPolygonsService;
+use App\Services\PolygonsService;
 
 class SortPolygonsTest extends TestCase
 {
@@ -19,7 +19,7 @@ class SortPolygonsTest extends TestCase
             new Polygon([new Point(1, 2), new Point(3, 5), new Point(-1, 5)])
         ];
 
-        $sps = new SortPolygonsService();
+        $sps = new PolygonsService();
         $sorted = $sps->sortPolys($arr);
 
         $this->assertEquals(count($arr), count($sorted));
@@ -34,7 +34,7 @@ class SortPolygonsTest extends TestCase
             new Polygon([new Point(1, 2), new Point(3, 5), new Point(8, 5), new Point(11, 9)])
         ];
 
-        $sps = new SortPolygonsService();
+        $sps = new PolygonsService();
         $sorted = $sps->sortPolys($arr);
 
         $this->assertArrayIsSorted($sorted);
@@ -47,7 +47,7 @@ class SortPolygonsTest extends TestCase
     public function assertArrayIsSorted($arr)
     {
         for ($i=0; $i < count($arr)-1; $i++) {
-            $this->assertNotTrue($arr[$i]->getWidth() < $arr[$i+1]->getWidth(), "Array isnt sorted");
+            $this->assertNotTrue($arr[$i]->getWidth() < $arr[$i+1]->getWidth(), "Array is not sorted");
         }
     }
 }

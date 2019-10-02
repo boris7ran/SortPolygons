@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Entity\Polygon;
 
-class SortPolygonsService
+class PolygonsService
 {
     /**
      * @param $polygons
